@@ -221,7 +221,7 @@ function changeBody(num){
         // videoConstraints.facingMode = 'user'; // camera frontal
       } else {
         videoConstraints.facingMode = 'user'; // camera frontal
-        videoConstraints.deviceId = { exact: select.value };
+        // videoConstraints.deviceId = { exact: select.value };
       }
       const constraints = {
         video: videoConstraints,
@@ -275,7 +275,7 @@ function stopMediaTracks(stream) {
 }
 
 function gotDevices(mediaDevices) {
-  select.innerHTML = '';
+  // select.innerHTML = '';
   // select.appendChild(document.createElement('option'));
   let count = 1;
   mediaDevices.forEach(mediaDevice => {
