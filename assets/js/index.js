@@ -217,7 +217,7 @@ function changeBody(num){
       }
       const videoConstraints = {};
       if (select.value === '') {
-        videoConstraints.facingMode = 'environment';
+        videoConstraints.facingMode = 'user';
       } else {
         videoConstraints.deviceId = { exact: select.value };
       }
