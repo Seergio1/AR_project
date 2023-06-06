@@ -1,0 +1,124 @@
+
+   @font-face{
+    font-family: "Poppins";
+    src: local("Poppins"),
+    url("../font/Poppins-Light.ttf")
+  }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins,sans-serif;
+}
+
+.nav_bar{
+  /* background-color: aqua; */
+  width:100%;
+  height: 8%;
+  display: flex;
+  box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+}
+
+.item_nav_bar{
+  font-size: 14.5px;
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: lightgray;
+  margin: auto;
+  padding: 0.9% 1%;
+  transition: 0.2s ease-out;
+  /* border: 1px solid lightblue; */
+}
+.item_nav_bar.active{
+  color:white ;
+  border-radius: 10px;
+  background-color: #B42D10;
+}
+
+.content{
+  /* background-color: red; */
+  width:100%;
+  height: 92%;
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+}
+/* scann part */
+.controls{
+  /* background-color: red; */
+  height: 5%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  position: absolute;
+  right: 5%;
+  z-index: 1;
+}
+.controls select{
+  padding:0.5% 1%;
+  /* border: none;
+  border-bottom: 1px solid lightgray; */
+  border: 0.5px solid rgb(228, 221, 221);
+  border-radius: 10px;
+  outline: none;
+  width: 52%;
+}
+video{
+  /* background-color: blue; */
+  height: 95%;
+}
+
+/* parametre part */
+.box_header{
+  background-color: #D59283;
+  height: 15%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.titre{
+  position: relative;
+  top: 12%;
+  left: 5%;
+  color: white;
+}
+.box_content_param{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+.content_item_param{
+  display: flex;
+  border-bottom: 1px solid black;
+  align-items: center;
+  margin: 10px auto;
+  width: 90%;
+  padding:2%;
+}
+.content_item_param i{
+  margin-right: 10%;
+}
+.box_toggle{
+  width: 35px;
+  height: 80%;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-right: 5%;
+}
+.toggle_item{
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border-radius: 50%;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+
+
+
+
