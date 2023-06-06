@@ -217,8 +217,10 @@ function changeBody(num){
       }
       const videoConstraints = {};
       if (select.value === '') {
-        videoConstraints.facingMode = 'user';
+         videoConstraints.facingMode = 'environment'; // camera back
+        // videoConstraints.facingMode = 'user'; // camera frontal
       } else {
+        videoConstraints.facingMode = 'user'; // camera frontal
         videoConstraints.deviceId = { exact: select.value };
       }
       const constraints = {
