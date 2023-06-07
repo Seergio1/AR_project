@@ -117,6 +117,16 @@ video{
   margin-top: 2%;
   margin-left: 5%;
 }
+#canvas{
+  /* background-color: red; */
+  width: 150px;
+  height: 90px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+}
 
 
 

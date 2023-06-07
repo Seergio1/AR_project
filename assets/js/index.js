@@ -3,7 +3,7 @@
 //     // une largeur fixe et on calculera la hauteur pour correspondre
 //     // aux proportions du flux vidéo d'entrée.
   
-//     const width = 320; // On met à l'échelle la photo pour avoir cette largeur
+    const width = 320; // On met à l'échelle la photo pour avoir cette largeur
 //     let height = 0;    // On calcule cette valeur ensuite selon le flux d'entrée
   
 //     // |streaming| indique si le flux vidéo est en cours
@@ -161,6 +161,8 @@ function changeBody(num){
         </select>
       </div>
   <video id="video" autoplay playsinline></video>
+  <canvas id="canvas"> </canvas>
+  <img id="photo">
   `;
   let parametre = `
   <div class="box_header">
@@ -215,7 +217,20 @@ function changeBody(num){
       if (typeof currentStream !== 'undefined') {
         stopMediaTracks(currentStream);
       }
-      const videoConstraints = {};
+      const videoConstraints = {
+        video:{
+          width:{
+            min:1280,
+            ideal:1920,
+            max:2560,
+          },
+          height:{
+            min:720,
+            ideal:1080,
+            max:1440,
+          }
+        }
+      };
       if (select.value === '') {
          videoConstraints.facingMode = 'environment'; // camera back
         // videoConstraints.facingMode = 'user'; // camera frontal
@@ -241,6 +256,18 @@ function changeBody(num){
     
     
     navigator.mediaDevices.enumerateDevices().then(gotDevices);
+
+    //capture d'ecran
+    let canvas = document.getElementById('canvas');
+    let photo = document.getElementById('photo');
+    video.addEventListener('click',()=>{
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      canvas.getContext("2d").drawImage(video,0,0);
+      photo.src = canvas.toDataURL("image/png");
+      photo.style.display = 'none';
+    });
+
   }
   if (num == 2) {
     content.innerHTML = '';
@@ -290,6 +317,7 @@ function gotDevices(mediaDevices) {
     }
   });
 }
+
 
 
 
