@@ -6,33 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" type="text/css" href="./assets/fontawesome-5/css/all.css">
 </head>
 
 <body>
     <div class="content">
       <!-- eto lay page rehetra -->
+      
     </div>
 
     <div class="nav_bar">
       <div class="item_nav_bar active">
         <i class="fas fa-map-marked-alt "></i>
-        <div id="map" class="text_item ">Map</div>
+        <div id="map" class="text_item" data-lang="fr">Carte</div>
+        <div id="map" class="text_item" data-lang="en" style="display: none;">Map</div>
+
       </div>
 
       <div class="item_nav_bar">
         <i class="fas fa-camera"></i>
-        <div id="scann" class="text_item">Scann</div>
+        <div id="scann" class="text_item" data-lang="fr">Analyse</div>
+        <div id="scann" class="text_item" data-lang="en" style="display: none;">Scan</div>
+
       </div>
 
       <div class="item_nav_bar">
         <i class="fas fa-cog"></i>
-        <div class="text_item">Paramètre</div>
+        <div class="text_item" data-lang="fr">Paramètre</div>
+        <div class="text_item" class="text_item" data-lang="en" style="display: none;">Setting</div>
+
       </div>
 
       <div class="item_nav_bar">
         <i class="fas fa-question"></i>
-        <div class="text_item">Aide</div>
+        <div class="text_item" data-lang="fr">Aide</div>
+        <div class="text_item" class="text_item" data-lang="en" style="display: none;">Help</div>
       </div>
       
     </div>
