@@ -10,6 +10,10 @@
     box-sizing: border-box;
     font-family: Poppins,sans-serif;
 }
+:root{
+  /* --theme-principal :#2f3542; */
+  --theme-principal :#c23616;
+}
 
 
 .nav_bar{
@@ -18,6 +22,7 @@
   height: 8%;
   display: flex;
   box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+  background-color: var(--back);
 }
 
 .item_nav_bar{
@@ -31,11 +36,13 @@
   margin: auto;
   padding: 0.9% 1%;
   transition: 0.2s ease-out;
+  
 }
 .item_nav_bar.active{
   color:white ;
   border-radius: 10px;
-  background-color: #B42D10;
+  background-color: var(--theme-principal);
+  /* background-color: #990000; */
 }
 
 .content{
@@ -63,6 +70,7 @@
   border-radius: 10px;
   outline: none;
   width: 52%;
+  display: none;
 }
 video{
   height: 95%;
@@ -70,7 +78,8 @@ video{
 
 /* parametre part */
 .box_header{
-  background-color: #D59283;
+  background-color:var(--theme-principal);
+  /* background-color: #990000; */
   height: 15%;
   display: flex;
   justify-content: left;
@@ -96,17 +105,18 @@ video{
   padding:2%;
 }
 .content_item_param i{
-  margin: 2% 5% 2% 0;
+  width: 5%;
+  /* background-color: red; */
   text-align: center;
-  padding: 0 5px;
-  /* margin-right: 10%; */
-  /* color: #B42D10; */
+}
+#info_{
+  margin-left: 20.5%;
 }
 .text_param:nth-child(3){
-  margin-left: 5%;
+  margin-left: 8%;
 }
 .text_param:nth-child(2){
-  margin-left:11%;
+  margin-left:20.5%;
 }                                                                           
 
 #canvas{
@@ -122,12 +132,13 @@ video{
 .info_objet{
   width:90%;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%,-50%);
-  background-color: white;
+  background-color: var(--back);
   border-radius: 10px;
   display: none;
+
 }
 .info_objet.open {
   display: flex;
@@ -162,6 +173,7 @@ video{
   overflow: hidden;
   position: relative;
   font-size: 14px;
+
 }
 .data_objet::after {
   content: '';
@@ -198,7 +210,12 @@ video{
   color: #B42D10;
   font-weight: bold;
 }
-
+/* langue */
+#langueSelect{
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+}
 /* notif */
 .notification{
   display: flex;
@@ -206,8 +223,8 @@ video{
   padding: 10px;
 }
 .notification img{
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   animation: swing 0.5s ease-in-out infinite alternate;
   transform-origin: bottom center;
 }

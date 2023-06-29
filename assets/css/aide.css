@@ -1,0 +1,50 @@
+:root{
+  --theme-didactiel:#d59283;
+}
+.didacticil__container {
+  position: relative;
+  width: 100vw;
+  padding: 30px;
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: scroll;
+  height: 85%;
+}
+
+.didacticiel {
+  width: 100%;
+}
+
+.didacticiel__desc .numero {
+  color: var(--theme-didactiel);
+  font-size: 22px;
+}
+
+.didacticiel__desc .desc {
+  font-size: 14px;
+  margin-top: -2px;
+}
+
+.didacticiel__desc .desc span {
+  color: var(--theme-didactiel);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.didacticiel__image {
+  margin-top: 10px;
+  background: gray;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TODO */
+.didacticiel__image .image {
+  height: 100%;
+  width: 100%;
+}

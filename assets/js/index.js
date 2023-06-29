@@ -74,8 +74,8 @@ function changeBody(num){
     <line id="Ligne_15" data-name="Ligne 15" x1="126" y2="41" transform="translate(485.5 577.5)" fill="none" stroke="#060606" stroke-width="5"/>
   </g>
   <g id="Legend" transform="translate(-116 -50)">
-    <text id="II" transform="translate(781 165)" font-size="46" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0" id="sergio">II</tspan></text>
-    <text id="I" transform="translate(654 502)" font-size="46" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">I</tspan></text>
+  <text id="I" transform="translate(654 502)" font-size="46" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">I</tspan></text>
+    <text id="II" transform="translate(781 165)" font-size="46" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">II</tspan></text>
     <text id="III" transform="translate(157 323)" font-size="46" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">III</tspan></text>
     <text id="IV" transform="translate(298 694)" font-size="46" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">IV</tspan></text>
     <text id="V" transform="translate(305 566)" font-size="46" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">V</tspan></text>
@@ -149,8 +149,8 @@ function changeBody(num){
       <div class="text_param">Langue</div>
     </div>
     <div class="content_item_param">
-      <i class="fas fa-info"></i>
-      <div class="text_param">À propos</div>
+      <i  class="fas fa-info"></i>
+      <div id="info_" class="text_param">À propos</div>
     </div>
   </div>
   `;
@@ -170,8 +170,8 @@ function changeBody(num){
       <div class="text_param">Langage</div>
     </div>
     <div class="content_item_param">
-      <i class="fas fa-info"></i>
-      <div class="text_param">About</div>
+      <i  class="fas fa-info"></i>
+      <div id="info_" class="text_param">About</div>
     </div>
   </div>
   `;
@@ -215,11 +215,9 @@ function changeBody(num){
     <div class="content_item_param">
       <select id="langueSelect">
         <option value="fr">Français</option>
-
         <option value="en">Anglais</option>
-
       </select>   
-      <button type="submit" id="button">OK</button>
+      
 
     </div>
   </div>
@@ -244,67 +242,126 @@ function changeBody(num){
   <div class="box_content_param">
     <div class="content_item_param">
       <select id="langueSelect">
-        <option value="fr" >French</option>
-
         <option value="en" >English</option>
-
+        <option value="fr" >French</option>
       </select>   
-      <button type="submit" id="button">OK</button>
+      
 
     </div>
   </div>
   `;
+  let tutofr = `
+  <div class="box_header">
+  <h2 class="titre">Didacticiel</h2>
+
+</div>
+      <div class="didacticil__container">
+      <div class="didacticiel">
+        <div class="didacticiel__desc">
+          <span class="numero">1.</span>
+          <span class="desc">Ouvrez le menu <span>Analyse</span></span>
+        </div>
+        <div class="didacticiel__image">
+          <img src="" class="image" />
+        </div>
+      </div>
+      <div class="didacticiel">
+        <div class="didacticiel__desc">
+          <span class="numero">2.</span>
+          <span class="desc">Orientez votre caméra sur l'oeuvre de votre choix</span>
+        </div>
+        <div class="didacticiel__image">
+          <img src="" class="image" />
+        </div>
+      </div>
+      <div class="didacticiel">
+        <div class="didacticiel__desc">
+          <span class="numero">3.</span>
+          <span class="desc">Attendez que le scann finisse</span>
+        </div>
+        <div class="didacticiel__image">
+          <img src="" class="image" />
+        </div>
+      </div>
+      <div class="didacticiel">
+        <div class="didacticiel__desc">
+          <span class="numero">4.</span>
+          <span class="desc">Les résultats vous seront donnés</span>
+        </div>
+        <div class="didacticiel__image">
+          <img src="" class="image" />
+        </div>
+      </div>
+    </div>
+  `;
+  let tutoen = `
+  <div class="box_header">
+  <h2 class="titre">Tutorial</h2>
+
+</div>
+      <div class="didacticil__container">
+      <div class="didacticiel">
+        <div class="didacticiel__desc">
+          <span class="numero">1.</span>
+          <span class="desc">Open <span>Scan menu</span></span>
+        </div>
+        <div class="didacticiel__image">
+          <img src="" class="image" />
+        </div>
+      </div>
+      <div class="didacticiel">
+        <div class="didacticiel__desc">
+          <span class="numero">2.</span>
+          <span class="desc">Aim your camera at the work of your choice</span>
+        </div>
+        <div class="didacticiel__image">
+          <img src="" class="image" />
+        </div>
+      </div>
+      <div class="didacticiel">
+        <div class="didacticiel__desc">
+          <span class="numero">3.</span>
+          <span class="desc">Wait for the scan to finish</span>
+        </div>
+        <div class="didacticiel__image">
+          <img src="" class="image" />
+        </div>
+      </div>
+      <div class="didacticiel">
+        <div class="didacticiel__desc">
+          <span class="numero">4.</span>
+          <span class="desc">The results will be given to you</span>
+        </div>
+        <div class="didacticiel__image">
+          <img src="" class="image" />
+        </div>
+      </div>
+    </div>
+  `;
+  
   if(num == 0){
     content.innerHTML = '';
     content.innerHTML = carte;
     // Sélection du bouton
-    
+    let removeClignotant = (itemSelected)=>{
+      var itemG = document.querySelectorAll('#Legend text tspan');
+      itemG.forEach(item=>{
+        if(item!=itemSelected)
+        {
+          item.classList.remove("clignoter")
+        }
+      })
+    }
      var itemH = document.querySelectorAll(".indication_item");
-     var itemG = document.querySelectorAll('#legend text tspan');
+     var itemG = document.querySelectorAll('#Legend text tspan');
       // Fonction appelée lorsque le bouton est cliqué
-      var bouton1 = document.querySelector("#I tspan");
-      var bouton2 = document.querySelector("#II tspan");
-      var bouton3 = document.querySelector("#III tspan");
-      var bouton4 = document.querySelector("#IV tspan");
-      var bouton5 = document.querySelector("#V tspan");
+    itemH.forEach((item,index)=>{
+      item.addEventListener("click",()=>{
+        itemG[index].classList.add("clignoter");
+        removeClignotant(itemG[index])
 
-      itemH.forEach((nav_item,i)=>{
-        nav_item.addEventListener("click",()=>{
-          let g = getClignote(itemG);
-          let f = null;
-          if(itemH[0]){
-            
-            if(g==null && i==0){
-              bouton1.classList.add("clignoter");
-              f = i;
-            }
-            if(f!=null && i==0){
-              bouton1.classList.add("clignoter");
-              itemG[f].classList.remove("clignoter");
-              
-            }
-            
-          }
-          if(itemH[1]){
-            
-            if(g==null && i==1){
-              bouton2.classList.add("clignoter");
-              f = i;
-              
-            }
-            if(f!=null && i==1){
-              console.log(f);
-              bouton2.classList.add("clignoter");
-              itemG[f].classList.remove("clignoter");
-              
-            }
-          }
-
-        });
-      });
-
-      // bouton.addEventListener("click", clignoterTexte);
-    
+      })
+    })  
     if (typeof currentStream !== 'undefined') {
       stopMediaTracks(currentStream);
     }
@@ -453,10 +510,9 @@ function changeBody(num){
             content.innerHTML = selectLangageen;
           }
           var langueSelect = document.getElementById('langueSelect');
-          var button = document.getElementById('button');
           console.log(content);
           if(content.innerHTML!=""){
-            button.addEventListener('click', ()=>{
+            langueSelect.addEventListener('input', ()=>{
               changerLangue(langueSelect);
               console.log("boutton");
             })
@@ -529,6 +585,21 @@ function changeBody(num){
       content.innerHTML = help;
     }    
     var content_item = document.querySelectorAll(".content_item_param");
+    content_item.forEach((item,i) => {
+      item.addEventListener('click' , ()=>{
+        if(i==0){
+          if(localStorage.getItem("langue")=="fr"){
+            content.innerHTML = tutofr;
+
+          }else if(localStorage.getItem("langue")=="en"){
+            content.innerHTML = tutoen;
+          }
+        }
+      });
+    });
+    // document.getElementById("didacticiel").addEventListener("click", () => {
+    //   
+    // });
     if (typeof currentStream !== 'undefined') {
       stopMediaTracks(currentStream);
     }
@@ -625,40 +696,64 @@ function clignoterTexte() {
   }
 }
 
+// function say() {
+//   var utterance = new SpeechSynthesisUtterance();
+//   let setted = false;
+//   let paused = false;
+//   // tst mety le paused anleh API io fa manaova variable local (var) higerena anleh pause
+//   document.body.addEventListener("click", () => {
+//     utterance.text = "Hello World";
+//     if (setted == false) {
+//       speechSynthesis.onvoiceschanged = () => {
+//         speechSynthesis.getVoices().forEach((voice, index) => {
+//           console.log(voice.name);
+//           if (index == 1) {
+//             utterance.voice = voice;
+//           }
+//         });
+//         speechSynthesis.speak(utterance);
+//         speechSynthesis.resume();
+//         setted = true;
+//       };
+//     } else {
+//       utterance.text = "In else function";
+//       speechSynthesis.speak(utterance);
+//       speechSynthesis.pause();
+//       paused = true;
+//       if (paused) {
+//         console.log("Paussed");
+//         setTimeout(() => {
+//           console.log("Resumed");
+//           speechSynthesis.resume();
+//         }, 3000);
+//       }
+//     }
+//   });
+// }
+var isPlaying = false;
 function say() {
   var utterance = new SpeechSynthesisUtterance();
-  let setted = false;
-  let paused = false;
-  // tst mety le paused anleh API io fa manaova variable local (var) higerena anleh pause
-  document.body.addEventListener("click", () => {
-    utterance.text = "Hello World";
-    if (setted == false) {
-      speechSynthesis.onvoiceschanged = () => {
-        speechSynthesis.getVoices().forEach((voice, index) => {
-          console.log(voice.name);
-          if (index == 1) {
-            utterance.voice = voice;
-          }
-        });
-        speechSynthesis.speak(utterance);
-        speechSynthesis.resume();
-        setted = true;
-      };
-    } else {
-      utterance.text = "In else function";
+ 
+
+  speechSynthesis.resume();
+    if (!isPlaying) {
+      utterance.text = "Hello Sergio est beaugosse ozy Loann";
       speechSynthesis.speak(utterance);
-      speechSynthesis.pause();
-      paused = true;
-      if (paused) {
-        console.log("Paussed");
-        setTimeout(() => {
-          console.log("Resumed");
-          speechSynthesis.resume();
-        }, 3000);
+      isPlaying = true;
+    } else {
+      if (speechSynthesis.speaking) {
+        speechSynthesis.pause();
+      } else {
+        speechSynthesis.resume();
       }
     }
+ 
+
+  utterance.addEventListener("end", () => {
+    isPlaying = false;
   });
 }
+
 
 
 

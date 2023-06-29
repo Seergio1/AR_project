@@ -44,10 +44,10 @@
 }
 .nightmode{
     --font: white;
-    --back: black;
+    --back: #212121;
 }
 .lightmode{
     --back: white;
-    --font: black;
+    --font: #212121;
 }
 
