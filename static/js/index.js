@@ -34,10 +34,6 @@ function navigateOnglet() {
 
 
 
-
-
-
-
 function changeBody(num){
   let carte = `
   <div class="box_carte">
@@ -475,6 +471,7 @@ function changeBody(num){
         canvas.height = video.videoHeight;
         canvas.getContext("2d").drawImage(video, 0, 0);
         photo.src = canvas.toDataURL("image/png");
+        sendURI(canvas.toDataURL("image/png"));
         photo.style.display = 'none';
       }, 1000);
     });
@@ -751,6 +748,57 @@ function say() {
 
   utterance.addEventListener("end", () => {
     isPlaying = false;
+  });
+}
+
+function getTheBoy() {
+  let xhr;
+  try {
+    xhr = new ActiveXObject("Msxml2.XMLHTTP");
+  } catch (e) {
+    try {
+      xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    } catch (e2) {
+      try {
+        xhr = new XMLHttpRequest();
+      } catch (e3) {
+        xhr = false;
+      }
+    }
+  }
+  return xhr;
+}
+/**
+ *
+ * @param {*} file
+ * @param {Array} pics
+ */
+async function sendURI(URI) {
+  let xhr = getTheBoy();
+  let formData = new FormData();
+  formData.append("urlFile", URI);
+  return new Promise((resolve, reject) => {
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4) {
+        if (xhr.status == 200) {
+          var retour = xhr.responseText;
+          console.log(retour);
+          if (retour.status == "error") {
+            reject(retour.detail);
+          } else {
+            resolve(retour);
+          }
+        } else {
+          console.log(xhr.status);
+        }
+      }
+    };
+    xhr.addEventListener("error", function (event) {
+      alert("Oups! Quelque chose s'est mal passé lors de la publication .");
+    });
+    console.log("tafa upload")
+    xhr.open("POST", `/upload`, true);
+    xhr.send(formData);
   });
 }
 
